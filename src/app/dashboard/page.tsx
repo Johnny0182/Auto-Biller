@@ -66,13 +66,13 @@ export default function Home() {
 
                 <TableCell  className="text-left p-4">
                     <span className="font-semibold">
-                    Marge Simpson
+                    Homer Simpson
                     </span>
                 </TableCell>
 
                 <TableCell  className="text-left p-4">
                     <span>
-                    marge.simpson@gmail.com
+                    homer.simpson@gmail.com
                     </span>
                 </TableCell>
                 
