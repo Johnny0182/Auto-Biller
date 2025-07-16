@@ -44,7 +44,6 @@
 
 @layer theme {
   :root, :host {
-    --color-gray-700: oklch(37.3% .034 259.733);
     --color-white: #fff;
     --spacing: .25rem;
     --container-xs: 20rem;
@@ -599,10 +598,6 @@
 
   .text-foreground {
     color: var(--foreground);
-  }
-
-  .text-gray-700 {
-    color: var(--color-gray-700);
   }
 
   .text-muted-foreground {
