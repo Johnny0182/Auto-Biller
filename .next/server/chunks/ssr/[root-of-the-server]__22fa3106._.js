@@ -17,6 +17,80 @@ var { g: global, __dirname } = __turbopack_context__;
 {
 __turbopack_context__.n(__turbopack_context__.i("[project]/src/app/layout.tsx [app-rsc] (ecmascript)"));
 }}),
+"[externals]/pg [external] (pg, esm_import)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, a: __turbopack_async_module__ } = __turbopack_context__;
+__turbopack_async_module__(async (__turbopack_handle_async_dependencies__, __turbopack_async_result__) => { try {
+const mod = await __turbopack_context__.y("pg");
+
+__turbopack_context__.n(mod);
+__turbopack_async_result__();
+} catch(e) { __turbopack_async_result__(e); } }, true);}),
+"[project]/src/db/schema.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname } = __turbopack_context__;
+{
+__turbopack_context__.s({
+    "Invoices": (()=>Invoices),
+    "statusEnum": (()=>statusEnum)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$timestamp$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/columns/timestamp.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$enum$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/columns/enum.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$table$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/table.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$serial$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/columns/serial.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$integer$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/columns/integer.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$text$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/pg-core/columns/text.js [app-rsc] (ecmascript)");
+;
+;
+;
+;
+;
+const statusEnum = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$enum$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["pgEnum"])('status', [
+    'open',
+    'paid',
+    'void',
+    'uncollectible'
+]);
+const Invoices = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$table$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["pgTable"])('invoices', {
+    id: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$serial$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["serial"])('id').primaryKey().notNull(),
+    createTs: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$timestamp$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["timestamp"])('create_ts').defaultNow().notNull(),
+    value: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$integer$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["integer"])('value').notNull(),
+    description: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$pg$2d$core$2f$columns$2f$text$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["text"])('description').notNull(),
+    status: statusEnum('status').notNull().default('open')
+});
+}}),
+"[project]/src/db/index.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
+"use strict";
+
+var { g: global, __dirname, a: __turbopack_async_module__ } = __turbopack_context__;
+__turbopack_async_module__(async (__turbopack_handle_async_dependencies__, __turbopack_async_result__) => { try {
+__turbopack_context__.s({
+    "db": (()=>db)
+});
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$node$2d$postgres$2f$driver$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/node-postgres/driver.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$pg__$5b$external$5d$__$28$pg$2c$__esm_import$29$__ = __turbopack_context__.i("[externals]/pg [external] (pg, esm_import)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$schema$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/db/schema.ts [app-rsc] (ecmascript)");
+var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
+    __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$node$2d$postgres$2f$driver$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__,
+    __TURBOPACK__imported__module__$5b$externals$5d2f$pg__$5b$external$5d$__$28$pg$2c$__esm_import$29$__
+]);
+([__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$node$2d$postgres$2f$driver$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__, __TURBOPACK__imported__module__$5b$externals$5d2f$pg__$5b$external$5d$__$28$pg$2c$__esm_import$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__);
+;
+;
+;
+const pool = new __TURBOPACK__imported__module__$5b$externals$5d2f$pg__$5b$external$5d$__$28$pg$2c$__esm_import$29$__["Pool"]({
+    connectionString: process.env.XATA_DATABASE_URL,
+    max: 20
+});
+const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$node$2d$postgres$2f$driver$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["drizzle"])(pool, {
+    schema: {
+        Invoices: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$schema$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Invoices"]
+    }
+});
+__turbopack_async_result__();
+} catch(e) { __turbopack_async_result__(e); } }, false);}),
 "[project]/src/lib/utils.ts [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -171,21 +245,23 @@ function Input({ className, type, ...props }) {
 "[project]/src/app/invoices/new/page.tsx [app-rsc] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
-var { g: global, __dirname } = __turbopack_context__;
-{
+var { g: global, __dirname, a: __turbopack_async_module__ } = __turbopack_context__;
+__turbopack_async_module__(async (__turbopack_handle_async_dependencies__, __turbopack_async_result__) => { try {
 __turbopack_context__.s({
     "default": (()=>Home)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$sql$2f$sql$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/drizzle-orm/sql/sql.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/db/index.ts [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/textarea.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/label.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/button.tsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/components/ui/input.tsx [app-rsc] (ecmascript)");
-(()=>{
-    const e = new Error("Cannot find module './actions'");
-    e.code = 'MODULE_NOT_FOUND';
-    throw e;
-})();
+var __turbopack_async_dependencies__ = __turbopack_handle_async_dependencies__([
+    __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__
+]);
+([__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__] = __turbopack_async_dependencies__.then ? (await __turbopack_async_dependencies__)() : __turbopack_async_dependencies__);
+;
 ;
 ;
 ;
@@ -193,6 +269,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$i
 ;
 ;
 async function Home() {
+    const results = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$db$2f$index$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["db"].execute(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$drizzle$2d$orm$2f$sql$2f$sql$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["sql"]`SELECT current_database()`);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         className: "flex flex-col justify-center h-full gap-6 max-w-5xl mx-auto my-12",
         children: [
@@ -203,16 +280,16 @@ async function Home() {
                     children: "Create A New Invoice"
                 }, void 0, false, {
                     fileName: "[project]/src/app/invoices/new/page.tsx",
-                    lineNumber: 13,
-                    columnNumber: 17
+                    lineNumber: 17,
+                    columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                lineNumber: 12,
-                columnNumber: 13
+                lineNumber: 16,
+                columnNumber: 7
             }, this),
+            JSON.stringify(results),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                action: createAction,
                 className: "grid gap-4 max-w-xs",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -223,8 +300,8 @@ async function Home() {
                                 children: "Billing Name"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 20,
-                                columnNumber: 21
+                                lineNumber: 26,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Input"], {
                                 id: "name",
@@ -233,14 +310,14 @@ async function Home() {
                                 autoComplete: "name"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 23,
-                                columnNumber: 21
+                                lineNumber: 29,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/invoices/new/page.tsx",
-                        lineNumber: 19,
-                        columnNumber: 17
+                        lineNumber: 25,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -250,8 +327,8 @@ async function Home() {
                                 children: "Billing Email"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 27,
-                                columnNumber: 21
+                                lineNumber: 33,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Input"], {
                                 id: "email",
@@ -259,14 +336,14 @@ async function Home() {
                                 type: "email"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 30,
-                                columnNumber: 21
+                                lineNumber: 36,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/invoices/new/page.tsx",
-                        lineNumber: 26,
-                        columnNumber: 17
+                        lineNumber: 32,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -276,8 +353,8 @@ async function Home() {
                                 children: "Billing Value"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 34,
-                                columnNumber: 21
+                                lineNumber: 40,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Input"], {
                                 id: "value",
@@ -285,14 +362,14 @@ async function Home() {
                                 type: "text"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 37,
-                                columnNumber: 21
+                                lineNumber: 43,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/invoices/new/page.tsx",
-                        lineNumber: 33,
-                        columnNumber: 17
+                        lineNumber: 39,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -302,53 +379,53 @@ async function Home() {
                                 children: "Description"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 41,
-                                columnNumber: 21
+                                lineNumber: 47,
+                                columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Textarea"], {
                                 id: "description",
                                 name: "description"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                                lineNumber: 44,
-                                columnNumber: 21
+                                lineNumber: 50,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/invoices/new/page.tsx",
-                        lineNumber: 40,
-                        columnNumber: 17
+                        lineNumber: 46,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Button"], {
-                            type: "submit",
                             className: "w-full font-semibold",
                             variant: "ghost",
                             children: "Submit Invoice"
                         }, void 0, false, {
                             fileName: "[project]/src/app/invoices/new/page.tsx",
-                            lineNumber: 48,
-                            columnNumber: 21
+                            lineNumber: 54,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/invoices/new/page.tsx",
-                        lineNumber: 47,
-                        columnNumber: 17
+                        lineNumber: 53,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/invoices/new/page.tsx",
-                lineNumber: 18,
-                columnNumber: 13
+                lineNumber: 24,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/invoices/new/page.tsx",
-        lineNumber: 11,
-        columnNumber: 9
+        lineNumber: 15,
+        columnNumber: 5
     }, this);
 }
-}}),
+__turbopack_async_result__();
+} catch(e) { __turbopack_async_result__(e); } }, false);}),
 "[project]/src/app/invoices/new/page.tsx [app-rsc] (ecmascript, Next.js server component)": ((__turbopack_context__) => {
 
 var { g: global, __dirname } = __turbopack_context__;
@@ -358,4 +435,4 @@ __turbopack_context__.n(__turbopack_context__.i("[project]/src/app/invoices/new/
 
 };
 
-//# sourceMappingURL=_32094da4._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__22fa3106._.js.map
