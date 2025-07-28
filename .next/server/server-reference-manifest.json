@@ -4,7 +4,7 @@
       "workers": {
         "app/invoices/new/page": {
           "moduleId": "[project]/.next-internal/server/app/invoices/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": false
+          "async": true
         }
       },
       "layer": {
