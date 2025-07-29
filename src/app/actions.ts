@@ -23,7 +23,7 @@ export async function createAction(formData: FormData) {
 }
   //next thing we are working on is sending user to 
   // to a new page after the invoice submit button is pressed
-  //('Form submitted!');
+  //('Form submitted!'); 1:05:20
   
   // Log all the form fields
   //const name = formData.get('name');

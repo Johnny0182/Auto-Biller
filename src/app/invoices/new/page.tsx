@@ -1,12 +1,31 @@
+'use client'
+
+import { SyntheticEvent, useState, startTransition } from "react";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { createAction } from "@/app/actions";
+import SubmitButton from "@/components/SubmitButton";
+
+
 
 // This is the page for creating a new invoice
 
 export default function Home() {
+    const [state, setState] = useState('ready');
+    async function handleOnSubmit(event: SyntheticEvent) {
+        event.preventDefault();
+        if (state === 'pending') return;
+        setState('pending');
+        const target = event.target as HTMLFormElement;
+        
+        startTransition(async () => {
+            const formData = new FormData(target);
+        await createAction(formData);
+        console.log('hey');
+    })
+}
     return (
         <main className="flex flex-col justify-center h-full gap-6 max-w-5xl mx-auto my-12">
             <div className="flex justify-between">
@@ -15,7 +34,7 @@ export default function Home() {
                 </h1>
             </div>
 
-            <form action={createAction} className="grid gap-4 max-w-xs">
+            <form action={createAction} onSubmit={handleOnSubmit} className="grid gap-4 max-w-xs">
                 <div>
                     <Label htmlFor="name" className="block mb-2 text-sm font-semibold">
                         Billing Name
@@ -45,9 +64,7 @@ export default function Home() {
                 </div>
                 
                 <div>
-                    <Button type="submit" className="w-full font-semibold" variant="ghost">
-                        Submit Invoice
-                    </Button>
+                    <SubmitButton />
                 </div>
             </form>
         </main>

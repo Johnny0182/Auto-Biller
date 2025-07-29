@@ -8,7 +8,7 @@
         }
       },
       "layer": {
-        "app/invoices/new/page": "rsc"
+        "app/invoices/new/page": "action-browser"
       }
     }
   },
