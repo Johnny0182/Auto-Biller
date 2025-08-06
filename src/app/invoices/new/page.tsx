@@ -26,6 +26,7 @@ export default function Home() {
         console.log('hey');
     })
 }
+
     return (
         <main className="flex flex-col justify-center h-full gap-6 max-w-5xl mx-auto my-12">
             <div className="flex justify-between">

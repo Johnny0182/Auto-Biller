@@ -1,11 +1,8 @@
 {
   "node": {
-    "401b3f50534bc8d12324ffca0d5714eafda3aac51c": {
+    "594cf7dc4048d82a7ea67a55496a90e786edd959": {
       "workers": {
-        "app/invoices/new/page": {
-          "moduleId": "[project]/.next-internal/server/app/invoices/new/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
-          "async": true
-        }
+        "app/invoices/new/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fjohnny%2FDocuments%2FAuto-Biller%2Fsrc%2Fapp%2Factions.ts%22%2C%5B%22createAction%22%5D%5D%5D&encryptionKey=TmwAwaOr%2B24qv2DQhDUnzsajYnQj28qrPTDmmqAN24w%3D&__client_imported__=true!"
       },
       "layer": {
         "app/invoices/new/page": "action-browser"
