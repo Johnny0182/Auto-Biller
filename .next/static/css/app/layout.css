@@ -137,6 +137,7 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xs: 20rem;
@@ -154,6 +155,7 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    --animate-spin: spin 1s linear infinite;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-geist-sans);
@@ -306,6 +308,9 @@
   }
 }
 @layer utilities {
+  .absolute {
+    position: absolute;
+  }
   .relative {
     position: relative;
   }
@@ -396,6 +401,9 @@
   }
   .caption-bottom {
     caption-side: bottom;
+  }
+  .animate-spin {
+    animation: var(--animate-spin);
   }
   .flex-col {
     flex-direction: column;
@@ -555,6 +563,9 @@
   }
   .text-foreground {
     color: var(--foreground);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-muted-foreground {
     color: var(--muted-foreground);
@@ -1273,6 +1284,11 @@ body {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
