@@ -21,9 +21,10 @@ export default function Home() {
         const target = event.target as HTMLFormElement;
         
         startTransition(async () => {
-            const formData = new FormData(target);
-        await createAction(formData);
         console.log('hey');
+        const formData = new FormData(target);
+        await createAction(formData);
+        
     })
 }
 
